@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dạ Vũ Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 12px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #e0e0e0;
+      border-radius: 4px;
+    }
+    .icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .search-box {
+      display: block;
+    }
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      height:100%;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+    .product {
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .product:hover {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      border-radius: 4px;
+    }
+    .product:hover img {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    #check {
+      display: none;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
+    .menu a:hover {
+      background-color: #e0e0e0;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 1024px) {
+        
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: white;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  .menu {
+    display: none;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search-container{
+        display: none;
+      }
+      .anhcuoi{
+       width: 100%;
+        height: auto;
+       object-fit: cover;
+      }
+}
+  
+    
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      #check:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+     
+position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 999;
+      }
+      .menu {
+        display: none;
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+     
+      .anhcuoi{
+       width: 100%;
+        height: auto;
+       object-fit: cover;
+      }
+      .search-container{
+        display: none;
+      }
+    }
+    .anhcuoi{
+        border-radius: 100px 0px 100px 0px;
+    }
+   .fotfot{
+    padding:50px;}
+   .fashion{
+    height: 50px;
+   width: 80px;
+   }
+  
+  </style>
+ 
+</head>
+<body>
+  <header>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="hamburger"><i class="fa fa-bars"></i></label>
+    <nav class="menu">
+      <a href="#">NỮ</a>
+      <a href="#">NAM</a>
+      <a href="#">SIÊU DEAL T4-SALE UPTO 70%</a>
+      <a href="#">BỘ SƯU TẬP</a>
+      <a href="#">VỀ CHÚNG TÔI</a>
+      
+    </nav>
+    <img class="fashion" src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/488790828_4187172291568924_6410887591162286474_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeH8K_dqSEqGJXn3DkEYQnB-IW5fK5m9xhIhbl8rmb3GErmFcOjmXCc96ahgbflAsYBh4IpqgXggR6Ph7tTLqRFJ&_nc_ohc=ccFZMJjDEqMQ7kNvwGSPsic&_nc_oc=Adl0urFpviPeTG_6ReUBHpEk2ctUSRtPOyQJyqw-o3FMpgOivPeHmozOdYBWYTaPyI_nD96XGz4lrjTdYBpgjqWE&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AEz_KPPmVDwjj7fsQCyn6LVaamd7rqqfxUC_ggU7nltWw&oe=681D6C31">
+    <div class="search-container">
+      <input class="b" type="text" id="searchInput" placeholder="Tìm kiếm..." oninput="filterProducts()">
+      <i class="fa fa-search"></i>
+      
+    </div>
+  </header>
+
+  <div class="carousel">
+    <img class="anhcuoi" src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/489156959_2281358108927612_7807281300311859013_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHyTpdlxxXG6VgUAKAbuy19cDPCYK7FWTZwM8JgrsVZNupRar4S4K57jYHH4O4ygL2x1LDC7Il-AuwBlphPtmUg&_nc_ohc=_Tk973s8KnMQ7kNvwFAG3vv&_nc_oc=AdnPd3wmfpf6enjRJ_G0T9b2QAMM4pkmEG6yCAU_vu9B5g_iIOjYfdIoNy3MJtsefCOc2s4h081eJEVWv3ogvJOQ&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AESul0cPyNjfd74E718gGy_yH9EGdl6dyQ49WNVy5vLGA&oe=681D7370" alt="Banner" > 
+  </div>
+
+  <h2>NEW ARRIVAL</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp1">
+      <p>Moonlit Lace - Áo sơ mi lụa</p>
+      <a class="a" style="color:red">1.830.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp2">
+      <p>Obsidian Curve - Chân váy</p>
+      <a class="a" style="color:red">1.430.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp3">
+      <p>Mystic Veil Blouse</p>
+      <a class="a" style="color:red">2.190.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp4">
+      <p>Golden Gienne Dress</p>
+      <a class="a" style="color:red">939.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+  </div>
+
+  <h2>GIẢM 50% CÁC SẢN PHẨM</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp5">
+      <p>Cocktail Ballet Dress</p>
+      <a class="a" style="color:red">1.480.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp6">
+      <p>Bliss Dress</p>
+      <a class="a" style="color:red">845.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp7">
+      <p>Áo vest Sophía Elegance</p>
+      <a class="a" style="color:red">754.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+    <div class="product">
+      <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/487545215_692226980068259_4470561646218231433_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHt8Ffmv9syj-SkU4m38d0L1ppByXj8C5bWmkHJePwLlofH__puv2Ua-DFkMJeLvXxC_bQO04a3e6he6k8C_4KG&_nc_ohc=gHg4ZxOpgsMQ7kNvwGX6fg4&_nc_oc=AdnNRs9xUrTxfH1jMoswEjQ67dpOoExGDEmYsUXo3VwI-5CgEA-LJzVH3Qzo40L6jY93tusfLpytcKLo-WgQVb3c&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AH5jq6JB2WPaSp6ZE_Ie49AGcgM1z5BnTmMygZWVJ0wpQ&oe=681D4A97" alt="sp8">
+      <p>Áo khoác blazer V cổ</p>
+      <a class="a" style="color:red">1.099.000</a>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+  </div>
+
+  <div class="carocuoi">
+    <img class="anhcuoi" src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.15752-9/488629018_2004311439978210_2834977518711787106_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEKkKD_Eky5T4KMqtfdbz2b2j4x7QUUG1faPjHtBRQbV9ctmj6Krp1FNQjAMtfnYUldx2wmjjRNoYP3_ijQLkEO&_nc_ohc=NGxjZubA0F0Q7kNvwF0IUZY&_nc_oc=AdlNC9k3at0Bx1zNR7bPD0keEeZWs0OQizPgnqkaaj7xuCkHq0vBvaeKjGd4l8tnmriww7CBdvGYC15HU_1GrptL&_nc_zt=23&_nc_ht=scontent.fhan5-3.fna&oh=03_Q7cD2AFrO65VNMP-yACp6B2JvJtYvAvXMC3lyWCDuFbZS7WGmw&oe=681D6BCC" alt="anhcuoi"> 
+  </div>
+  
+  <footer>
+    <a class="fotfot">Họ và tên :Đỗ Trung Kiên</a>
+    <a class="fotfot">Lớp:TUD D2024</a>
+    <a class="fotfot">Khoa:Toán-CNTT</a>
